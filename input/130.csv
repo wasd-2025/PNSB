@@ -1,0 +1,43 @@
+locusId,gene_name,time,Log2FC_mean,norm_gene_fitness_mean
+GHNIGC_20290,Ribulose bisphosphate carboxylase large chain 1,0-6,7.557762289,3
+GHNIGC_20295,ribulose bisphosphate carboxylase small subunit,0-6,7.260515301,3
+GHNIGC_20300,AAA family ATPase,0-6,6.706875664,3
+GHNIGC_20305,von Willebrand factor type A,0-6,6.388147669,3
+GHNIGC_08355,Ribulose bisphosphate carboxylase large chain 2,0-6,6.844301459,3
+GHNIGC_08360,ribulose bisphosphate carboxylase small subunit,0-6,6.584765494,3
+GHNIGC_08365,CbbX protein,0-6,6.627300196,3
+GHNIGC_01810,LysR family transcriptional regulator,0-6,1.383132834,3
+GHNIGC_01815,formate dehydrogenase subunit gamma,0-6,3.970409042,3
+GHNIGC_01820,formate dehydrogenase,0-6,4.233522461,3
+GHNIGC_01825,formate dehydrogenase subunit alpha,0-6,3.993177377,3
+GHNIGC_01830,formate dehydrogenase accessory sulfurtransferase FdhD,0-6,4.202177536,3
+GHNIGC_01835,formate dehydrogenase,0-6,4.786092155,3
+GHNIGC_01840,MFS transporter,0-6,2.723897871,3
+GHNIGC_20290,Ribulose bisphosphate carboxylase large chain 1,0-48,3.113560623,3
+GHNIGC_20295,ribulose bisphosphate carboxylase small subunit,0-48,2.892636105,3
+GHNIGC_20300,AAA family ATPase,0-48,2.377686452,3
+GHNIGC_20305,von Willebrand factor type A,0-48,2.345832065,3
+GHNIGC_08355,Ribulose bisphosphate carboxylase large chain 2,0-48,4.600709697,3
+GHNIGC_08360,ribulose bisphosphate carboxylase small subunit,0-48,4.718407449,3
+GHNIGC_08365,CbbX protein,0-48,4.297239223,3
+GHNIGC_01810,LysR family transcriptional regulator,0-48,1.899189683,3
+GHNIGC_01815,formate dehydrogenase subunit gamma,0-48,3.911965949,3
+GHNIGC_01820,formate dehydrogenase,0-48,4.672795484,3
+GHNIGC_01825,formate dehydrogenase subunit alpha,0-48,4.283661965,3
+GHNIGC_01830,formate dehydrogenase accessory sulfurtransferase FdhD,0-48,4.620285617,3
+GHNIGC_01835,formate dehydrogenase,0-48,4.583636158,3
+GHNIGC_01840,MFS transporter,0-48,3.448234817,3
+GHNIGC_20290,Ribulose bisphosphate carboxylase large chain 1,6-48,-4.431026553,3
+GHNIGC_20295,ribulose bisphosphate carboxylase small subunit,6-48,-4.359353265,3
+GHNIGC_20300,AAA family ATPase,6-48,-4.326800792,3
+GHNIGC_20305,von Willebrand factor type A,6-48,-4.045546261,3
+GHNIGC_08355,Ribulose bisphosphate carboxylase large chain 2,6-48,-2.238461822,3
+GHNIGC_08360,ribulose bisphosphate carboxylase small subunit,6-48,-1.865110632,3
+GHNIGC_08365,CbbX protein,6-48,-2.332335305,3
+GHNIGC_01810,LysR family transcriptional regulator,6-48,0.506448939,3
+GHNIGC_01815,formate dehydrogenase subunit gamma,6-48,-0.063524836,3
+GHNIGC_01820,formate dehydrogenase,6-48,0.433048778,3
+GHNIGC_01825,formate dehydrogenase subunit alpha,6-48,0.285693634,3
+GHNIGC_01830,formate dehydrogenase accessory sulfurtransferase FdhD,6-48,0.414264712,3
+GHNIGC_01835,formate dehydrogenase,6-48,-0.220842638,3
+GHNIGC_01840,MFS transporter,6-48,0.719224996,3
