@@ -1,0 +1,33 @@
+﻿gene_id,gene_name,gene_symbol_from_genbank,gene_product_from_genbank,in_dsm123_genome,reaction_count_in_final,reaction_ids_in_final,gpr_rules_in_final
+ACXYSJ_01135,,cysK,cysteine synthase A,yes,2,CYSS_2 | R05224_1,ACXYSJ_01135
+ACXYSJ_01170,,,carboxylesterase family protein,yes,1,SFGTHi,ACXYSJ_01170
+ACXYSJ_03020,,,branched-chain amino acid ABC transporter permease,yes,1,DALAabcpp,ACXYSJ_03020 or ACXYSJ_18280 or ACXYSJ_18275
+ACXYSJ_05120,,,CHAD domain-containing protein,yes,1,PPA2,ACXYSJ_05120
+ACXYSJ_05895,,,pyridoxamine 5'-phosphate oxidase family protein,yes,1,FLDR2,ACXYSJ_05895
+ACXYSJ_06260,,,"carotenoid 1,2-hydratase",yes,3,C12HR | HNPSYN | LCLY,ACXYSJ_06260
+ACXYSJ_06420,,puhB,photosynthetic complex putative assembly protein PuhB,yes,0,,
+ACXYSJ_06660,,,"3'(2'),5'-bisphosphate nucleotidase CysQ family protein",yes,1,BPNT,ACXYSJ_06660
+ACXYSJ_06930,,,thiamine pyrophosphate-dependent enzyme,yes,1,OCTDPS,ACXYSJ_06930
+ACXYSJ_07495,,treZ,malto-oligosyltrehalose trehalohydrolase,yes,1,GLCDBRAN3,ACXYSJ_07495
+ACXYSJ_07975,,,D-alanine--D-alanine ligase family protein,yes,1,ALAALAr,ACXYSJ_07975
+ACXYSJ_08150,,,thymidylate synthase,yes,1,TMDS3,ACXYSJ_08150
+ACXYSJ_08155,,,dihydrofolate reductase,yes,1,DHFR,ACXYSJ_08155
+ACXYSJ_08490,,cysE,serine O-acetyltransferase,yes,1,SERAT,ACXYSJ_08490
+ACXYSJ_08895,,,histidine phosphatase family protein,yes,1,RZ5PP,ACXYSJ_08895
+ACXYSJ_11060,,pabB,aminodeoxychorismate synthase component I,yes,1,ADCS,ACXYSJ_11060
+ACXYSJ_13565,,sufD,Fe-S cluster assembly protein SufD,yes,5,S2FE2SS | S2FE2SS2 | S4FE4SR | S4FE4ST | SCYSDS,ACXYSJ_13550 and ACXYSJ_13555 and ACXYSJ_13560 and ACXYSJ_13565 and ACXYSJ_13570 and ACXYSJ_13575 || ACXYSJ_13560 and ACXYSJ_13565
+ACXYSJ_14230,,exbB,tonB-system energizer ExbB,yes,0,,
+ACXYSJ_14370,,cobF,precorrin-6A synthase (deacetylating),yes,1,R05219,ACXYSJ_14370
+ACXYSJ_14375,,cobS,adenosylcobinamide-GDP ribazoletransferase,yes,1,ADOCBLS,ACXYSJ_14375
+ACXYSJ_14385,,tcuA,FAD-dependent tricarballylate dehydrogenase TcuA,yes,1,PRE3BS,ACXYSJ_14385
+ACXYSJ_16640,,,fatty acid desaturase family protein,yes,1,DESAT16a,ACXYSJ_16640
+ACXYSJ_17670,,,glycosyltransferase family 4 protein,yes,1,THBTGT,ACXYSJ_17670 or ACXYSJ_23970
+ACXYSJ_18275,,,branched-chain amino acid ABC transporter permease,yes,1,DALAabcpp,ACXYSJ_03020 or ACXYSJ_18280 or ACXYSJ_18275
+ACXYSJ_18280,,,branched-chain amino acid ABC transporter permease,yes,1,DALAabcpp,ACXYSJ_03020 or ACXYSJ_18280 or ACXYSJ_18275
+ACXYSJ_18885,,,ABC transporter ATP-binding protein,yes,1,SULabc,ACXYSJ_19790 and ACXYSJ_19785 and ACXYSJ_19780 and ACXYSJ_18885
+ACXYSJ_20390,,cobD,threonine-phosphate decarboxylase CobD,yes,1,THRPDC,ACXYSJ_20390
+ACXYSJ_21185,,,glycosyltransferase family 4 protein,yes,1,SULR_2,ACXYSJ_21185
+ACXYSJ_23625,,,OFA family MFS transporter,yes,1,FORt,ACXYSJ_23625
+ACXYSJ_24075,,sucD,succinate--CoA ligase subunit alpha,yes,1,SUCOAS,ACXYSJ_24075 and ACXYSJ_24090
+ACXYSJ_24090,,sucC,ADP-forming succinate--CoA ligase subunit beta,yes,1,SUCOAS,ACXYSJ_24075 and ACXYSJ_24090
+ACXYSJ_24455,,,MBOAT family O-acyltransferase,yes,1,MCOATA,ACXYSJ_24455

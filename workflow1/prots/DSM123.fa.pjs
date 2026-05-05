@@ -1,0 +1,22 @@
+{
+  "version": "1.2",
+  "dbname": "DSM123.fa",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "D:\\Project\\ai_project\\DSM123\\workflow1\\prots\\DSM123.fa",
+  "number-of-letters": 1525099,
+  "number-of-sequences": 4859,
+  "last-updated": "2026-04-05T23:13:00",
+  "number-of-volumes": 1,
+  "bytes-total": 3015883,
+  "bytes-to-cache": 1568971,
+  "files": [
+    "DSM123.fa.pdb",
+    "DSM123.fa.phr",
+    "DSM123.fa.pin",
+    "DSM123.fa.pot",
+    "DSM123.fa.psq",
+    "DSM123.fa.ptf",
+    "DSM123.fa.pto"
+  ]
+}

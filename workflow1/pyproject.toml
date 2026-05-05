@@ -1,0 +1,18 @@
+﻿[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dsm123-metabolic-pipeline"
+version = "0.1.0"
+description = "Notebook-equivalent metabolic reconstruction pipeline for DSM123 workflow"
+requires-python = ">=3.10"
+dependencies = [
+  "appdirs",
+  "biopython",
+  "cobra",
+  "pandas"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,22 @@
+{
+  "version": "1.2",
+  "dbname": "blast_bigg_db",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "bigg_resources/clean_bigg_proteins.fasta",
+  "number-of-letters": 2315710,
+  "number-of-sequences": 6077,
+  "last-updated": "2026-03-17T23:09:00",
+  "number-of-volumes": 1,
+  "bytes-total": 2981800,
+  "bytes-to-cache": 2370532,
+  "files": [
+    "blast_bigg_db.pdb",
+    "blast_bigg_db.phr",
+    "blast_bigg_db.pin",
+    "blast_bigg_db.pot",
+    "blast_bigg_db.psq",
+    "blast_bigg_db.ptf",
+    "blast_bigg_db.pto"
+  ]
+}

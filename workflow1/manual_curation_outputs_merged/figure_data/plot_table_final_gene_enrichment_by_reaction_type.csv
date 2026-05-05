@@ -1,0 +1,3 @@
+﻿reaction_type,gene_reaction_pair_count,pair_fraction,pair_percent,unique_gene_count,unique_gene_fraction_of_model,unique_gene_percent_of_model,reaction_count_with_gene_rule
+Metabolic (internal),2278,0.662787,66.279,786,0.783649,78.365,1407
+Transport (multi-compartment),1159,0.337213,33.721,250,0.249252,24.925,378

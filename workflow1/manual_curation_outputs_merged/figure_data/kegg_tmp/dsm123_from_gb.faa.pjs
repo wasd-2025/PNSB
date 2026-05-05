@@ -1,0 +1,22 @@
+{
+  "version": "1.2",
+  "dbname": "dsm123_from_gb.faa",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "D:\\Project\\ai_project\\DSM123\\workflow1\\manual_curation_outputs_merged\\figure_data\\kegg_tmp\\dsm123_from_gb.faa",
+  "number-of-letters": 1520304,
+  "number-of-sequences": 4859,
+  "last-updated": "2026-04-11T17:21:00",
+  "number-of-volumes": 1,
+  "bytes-total": 3011152,
+  "bytes-to-cache": 1564240,
+  "files": [
+    "dsm123_from_gb.faa.pdb",
+    "dsm123_from_gb.faa.phr",
+    "dsm123_from_gb.faa.pin",
+    "dsm123_from_gb.faa.pot",
+    "dsm123_from_gb.faa.psq",
+    "dsm123_from_gb.faa.ptf",
+    "dsm123_from_gb.faa.pto"
+  ]
+}

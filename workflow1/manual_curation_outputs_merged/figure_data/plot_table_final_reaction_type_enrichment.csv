@@ -1,0 +1,7 @@
+﻿reaction_type,count,fraction,percent
+Metabolic (internal),1572,0.667516,66.752
+Transport (multi-compartment),516,0.219108,21.911
+Exchange,231,0.098089,9.809
+Demand/Sink,17,0.007219,0.722
+Biomass/Objective,11,0.004671,0.467
+Boundary/Single-metabolite,8,0.003397,0.34

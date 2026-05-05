@@ -1,0 +1,24 @@
+{
+  "run_timestamp": "2026-04-05T23:15:55",
+  "reference_id": "Rpal_BisA53",
+  "target_id": "DSM123",
+  "target_gb_path": "D:\\Project\\ai_project\\DSM123\\workflow1\\genomes\\DSM123.gb",
+  "thresholds": {
+    "bbh_cov_threshold": 0.2,
+    "ortho_pid_threshold": 65.0,
+    "blastn_pid_threshold": 70.0,
+    "blastn_alignment_ratio_threshold": 0.8,
+    "unannotated_pid_threshold": 80.0,
+    "blast_evalue": 0.001
+  },
+  "gapfill": {
+    "missing_reactions": 210,
+    "added_reactions": 210
+  },
+  "fba": {
+    "default_objective": 0.7097712093951047,
+    "m9_objective": 0.2161850477378679,
+    "final_model_objective": 0.7097712093951047
+  },
+  "pseudogene_hits": {}
+}

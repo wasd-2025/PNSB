@@ -1,0 +1,22 @@
+{
+  "version": "1.2",
+  "dbname": "consensus_from_gb.faa",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "D:\\Project\\ai_project\\DSM123\\workflow1\\manual_curation_outputs_merged\\figure_data\\kegg_tmp\\consensus_from_gb.faa",
+  "number-of-letters": 1511775,
+  "number-of-sequences": 4823,
+  "last-updated": "2026-04-11T17:21:00",
+  "number-of-volumes": 1,
+  "bytes-total": 2998995,
+  "bytes-to-cache": 1555395,
+  "files": [
+    "consensus_from_gb.faa.pdb",
+    "consensus_from_gb.faa.phr",
+    "consensus_from_gb.faa.pin",
+    "consensus_from_gb.faa.pot",
+    "consensus_from_gb.faa.psq",
+    "consensus_from_gb.faa.ptf",
+    "consensus_from_gb.faa.pto"
+  ]
+}

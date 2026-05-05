@@ -1,0 +1,2 @@
+﻿updated_model_path,final_model_path,genes_updated,genes_final,genes_added,genes_removed,reactions_updated,reactions_final,reactions_added,reactions_removed,gpr_changed_reactions,added_reaction_rows_in_gpr_table,removed_reaction_rows_in_gpr_table,metabolites_updated,metabolites_final,metabolites_added,metabolites_removed,added_genes_with_reaction_links
+D:\Project\ai_project\DSM123\workflow1\updated_consensus.json,D:\Project\ai_project\DSM123\workflow1\Models\purple_bacteriav_DSM123.json,1168,1003,32,197,2469,2355,64,178,114,64,178,2038,2030,2030,2038,30

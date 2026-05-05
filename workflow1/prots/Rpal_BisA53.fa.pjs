@@ -1,0 +1,22 @@
+{
+  "version": "1.2",
+  "dbname": "Rpal_BisA53.fa",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "D:\\Project\\ai_project\\DSM123\\workflow1\\prots\\Rpal_BisA53.fa",
+  "number-of-letters": 1562116,
+  "number-of-sequences": 4881,
+  "last-updated": "2026-04-05T23:13:00",
+  "number-of-volumes": 1,
+  "bytes-total": 3050249,
+  "bytes-to-cache": 1606194,
+  "files": [
+    "Rpal_BisA53.fa.pdb",
+    "Rpal_BisA53.fa.phr",
+    "Rpal_BisA53.fa.pin",
+    "Rpal_BisA53.fa.pot",
+    "Rpal_BisA53.fa.psq",
+    "Rpal_BisA53.fa.ptf",
+    "Rpal_BisA53.fa.pto"
+  ]
+}

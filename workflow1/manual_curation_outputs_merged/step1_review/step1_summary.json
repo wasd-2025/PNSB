@@ -1,0 +1,17 @@
+{
+  "model": "D:\\Project\\ai_project\\DSM123\\workflow1\\manual_curation_outputs_merged\\step2_review\\DSM123_pre_step2_reconstructed.json",
+  "bbh_source": "D:\\Project\\ai_project\\DSM123\\workflow1\\bbh\\Rpal_BisA53_vs_DSM123_parsed.csv",
+  "thresholds": {
+    "identity_percent_gte": 50.0,
+    "evalue_lte": 0.001
+  },
+  "counts": {
+    "conflicts": 280,
+    "missing_candidates": 154,
+    "filtered_bbh_hits": 3262
+  },
+  "tables": {
+    "conflicts": "D:\\Project\\ai_project\\DSM123\\workflow1\\manual_curation_outputs_merged\\step1_review\\model_gpr_conflicts_report.csv",
+    "missing_candidates": "D:\\Project\\ai_project\\DSM123\\workflow1\\manual_curation_outputs_merged\\step1_review\\model_missing_genes_candidates.csv"
+  }
+}

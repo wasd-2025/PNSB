@@ -1,0 +1,5 @@
+﻿stage,model_path,metabolites,reactions,genes,exogenous_genes
+iDT1294Photo,D:\Project\ai_project\DSM123\workflow1\iDT1294Photo.json,2038,2588,1294,1294
+DSM123,D:\Project\ai_project\DSM123\workflow1\Models\DSM123.json,2038,2259,976,0
+updated_consensus,D:\Project\ai_project\DSM123\workflow1\updated_consensus.json,2038,2469,1168,192
+purple_bacteriav_DSM123,D:\Project\ai_project\DSM123\workflow1\Models\purple_bacteriav_DSM123.json,2030,2355,1003,0

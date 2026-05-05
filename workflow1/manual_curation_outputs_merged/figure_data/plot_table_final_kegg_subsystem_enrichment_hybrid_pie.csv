@@ -1,0 +1,22 @@
+﻿subsystem,reaction_count,percent
+Reaction-type: Internal metabolic,1058,44.926
+Reaction-type: Transport,397,16.858
+Reaction-type: Exchange,231,9.809
+Metabolism of cofactors and vitamins,102,4.331
+Amino acid metabolism,95,4.034
+Carbohydrate metabolism,91,3.864
+Membrane transport,59,2.505
+Lipid metabolism,51,2.166
+Energy metabolism,37,1.571
+Biosynthesis of other secondary metabolites,36,1.529
+Nucleotide metabolism,36,1.529
+Glycan biosynthesis and metabolism,30,1.274
+Cellular community - prokaryotes,26,1.104
+Xenobiotics biodegradation and metabolism,25,1.062
+Signal transduction,21,0.892
+Reaction-type: Demand/Sink,17,0.722
+Metabolism of terpenoids and polyketides,15,0.637
+Reaction-type: Biomass/Objective,11,0.467
+Translation,7,0.297
+"Folding, sorting and degradation",6,0.255
+Metabolism of other amino acids,4,0.17

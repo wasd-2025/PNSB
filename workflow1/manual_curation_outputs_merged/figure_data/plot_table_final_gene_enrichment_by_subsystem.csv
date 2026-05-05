@@ -1,0 +1,9 @@
+﻿subsystem,gene_reaction_pair_count,pair_fraction,pair_percent,unique_gene_count,unique_gene_fraction_of_model,unique_gene_percent_of_model,reaction_count_with_gene_rule
+Unknown,3427,0.99709,99.709,973,0.97009,97.009,1775
+S_Cofactor_and_Prosthetic_Group_Biosynthesis__Queuosine_biosynthesis,3,0.000873,0.087,1,0.000997,0.1,3
+S_Glutamate_Metabolism,2,0.000582,0.058,1,0.000997,0.1,2
+Cofactor and Prosthetic Group Biosynthesis,1,0.000291,0.029,1,0.000997,0.1,1
+Folate Metabolism,1,0.000291,0.029,1,0.000997,0.1,1
+S_Fatty_Acid_Metabolism,1,0.000291,0.029,1,0.000997,0.1,1
+Aromatic Compound degradation,1,0.000291,0.029,1,0.000997,0.1,1
+S_Alternate_Carbon__Ascorbate_and_Aldarate_Metabolism,1,0.000291,0.029,1,0.000997,0.1,1

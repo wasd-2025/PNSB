@@ -1,0 +1,5 @@
+﻿stage,model_path,genes,metabolites,reactions,endogenous_genes_in_dsm123_genome,exogenous_genes_not_in_dsm123_genome,exogenous_gene_ratio,gene_prefix_breakdown_all,gene_prefix_breakdown_endogenous,gene_prefix_breakdown_exogenous
+iDT1294Photo,D:\Project\ai_project\DSM123\workflow1\iDT1294Photo.json,1294,2038,2588,0,1294,1.0,RPE:1294,,RPE:1294
+DSM123,D:\Project\ai_project\DSM123\workflow1\Models\DSM123.json,976,2038,2259,976,0,0.0,ACXYSJ:976,ACXYSJ:976,
+updated_consensus,D:\Project\ai_project\DSM123\workflow1\updated_consensus.json,1168,2038,2469,976,192,0.164384,ACXYSJ:976 | RPE:192,ACXYSJ:976,RPE:192
+purple_bacteriav_DSM123,D:\Project\ai_project\DSM123\workflow1\Models\purple_bacteriav_DSM123.json,1003,2030,2355,1003,0,0.0,ACXYSJ:1003,ACXYSJ:1003,

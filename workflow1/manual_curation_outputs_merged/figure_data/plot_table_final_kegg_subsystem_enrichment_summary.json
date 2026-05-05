@@ -1,0 +1,30 @@
+{
+  "final_model": "D:\\Project\\ai_project\\DSM123\\workflow1\\Models\\purple_bacteriav_DSM123.json",
+  "dsm123_genome": "D:\\Project\\ai_project\\DSM123\\workflow1\\genomes\\DSM123.gb",
+  "consensus_genome_for_ko_transfer": "D:\\Project\\ai_project\\DSM123\\workflow1\\genomes\\consensus.gb",
+  "rbh_thresholds": {
+    "pid_gte": 60.0,
+    "qcov_gte": 0.7,
+    "scov_gte": 0.7,
+    "evalue_lte": 1e-05
+  },
+  "counts": {
+    "final_model_genes_total": 1003,
+    "final_model_genes_with_kegg_class": 256,
+    "dsm123_genes_with_kegg_class_background": 543,
+    "rbh_pairs_dsm123_to_consensus": 4659,
+    "consensus_genes_with_ko": 908,
+    "unique_kos_in_background": 749,
+    "unique_pathways_in_background": 130,
+    "final_model_reactions_total": 2355,
+    "reaction_assignment_basis_counts": {
+      "reaction_type_fallback": 1714,
+      "kegg_ko_gene_mapping": 641
+    }
+  },
+  "outputs": {
+    "kegg_subsystem_enrichment_table": "D:\\Project\\ai_project\\DSM123\\workflow1\\manual_curation_outputs_merged\\figure_data\\plot_table_final_kegg_subsystem_enrichment.csv",
+    "kegg_subsystem_enrichment_hybrid": "D:\\Project\\ai_project\\DSM123\\workflow1\\manual_curation_outputs_merged\\figure_data\\plot_table_final_kegg_subsystem_enrichment_hybrid.csv",
+    "kegg_subsystem_enrichment_hybrid_pie": "D:\\Project\\ai_project\\DSM123\\workflow1\\manual_curation_outputs_merged\\figure_data\\plot_table_final_kegg_subsystem_enrichment_hybrid_pie.csv"
+  }
+}

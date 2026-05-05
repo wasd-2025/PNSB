@@ -1,0 +1,37 @@
+{
+  "source_model_for_step2_audit": "D:\\Project\\ai_project\\DSM123\\workflow1\\manual_curation_outputs_merged\\step2_review\\DSM123_pre_step2_reconstructed.json",
+  "updated_model_inplace": "D:\\Project\\ai_project\\DSM123\\workflow1\\Models\\DSM123_manual_working.json",
+  "notes": [
+    "Duplicate candidates are grouped strictly by compartment + formula.",
+    "Column 'new' drives metabolite merge actions (supports syntax like 'a | b = target').",
+    "In orphan table, action=no triggers deletion; other rows are retained.",
+    "Only core step2 tables are exported by request."
+  ],
+  "counts": {
+    "renamed_u": 1735,
+    "merged_u_into_existing": 95,
+    "quln_alias_merged": 0,
+    "nndpr_rewritten": 1,
+    "duplicate_candidate_groups_formula_compartment": 238,
+    "merge_plan_rows": 11,
+    "merge_plan_rows_applied": 11,
+    "merged_metabolites_from_plan": 11,
+    "merge_plan_rows_skipped": 0,
+    "bridge_cp": 82,
+    "bridge_ep": 36,
+    "bridge_ce": 144,
+    "orphan_action_rows": 12,
+    "orphan_rows_deleted": 12,
+    "orphan_action_rows_skipped": 0,
+    "empty_reactions_removed_by_orphan_action": 19,
+    "suffix_u_remaining": 11,
+    "compartment_mismatch": 0,
+    "orphan_metabolites": 520,
+    "missing_formula": 2
+  },
+  "tables": {
+    "duplicate_metabolite_candidates": "D:\\Project\\ai_project\\DSM123\\workflow1\\manual_curation_outputs_merged\\step2_review\\step2_table_duplicate_metabolite_candidates.csv",
+    "compartment_bridge_reactions": "D:\\Project\\ai_project\\DSM123\\workflow1\\manual_curation_outputs_merged\\step2_review\\step2_table_compartment_bridge_reactions.csv",
+    "orphan_metabolites": "D:\\Project\\ai_project\\DSM123\\workflow1\\manual_curation_outputs_merged\\step2_review\\step2_table_orphan_metabolites.csv"
+  }
+}

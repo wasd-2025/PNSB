@@ -1,0 +1,28 @@
+{
+  "dsm123_genome_for_endogenous_exogenous_definition": "D:\\Project\\ai_project\\DSM123\\workflow1\\genomes\\DSM123.gb",
+  "stage_models": {
+    "iDT1294Photo": "D:\\Project\\ai_project\\DSM123\\workflow1\\iDT1294Photo.json",
+    "DSM123": "D:\\Project\\ai_project\\DSM123\\workflow1\\Models\\DSM123.json",
+    "updated_consensus": "D:\\Project\\ai_project\\DSM123\\workflow1\\updated_consensus.json",
+    "purple_bacteriav_DSM123": "D:\\Project\\ai_project\\DSM123\\workflow1\\Models\\purple_bacteriav_DSM123.json"
+  },
+  "outputs": {
+    "stage_4d_counts": "D:\\Project\\ai_project\\DSM123\\workflow1\\manual_curation_outputs_merged\\figure_data\\plot_table_stage_4d_counts.csv",
+    "final_reaction_type_enrichment": "D:\\Project\\ai_project\\DSM123\\workflow1\\manual_curation_outputs_merged\\figure_data\\plot_table_final_reaction_type_enrichment.csv",
+    "final_reaction_subsystem_enrichment": "D:\\Project\\ai_project\\DSM123\\workflow1\\manual_curation_outputs_merged\\figure_data\\plot_table_final_reaction_subsystem_enrichment.csv",
+    "final_gene_enrichment_by_reaction_type": "D:\\Project\\ai_project\\DSM123\\workflow1\\manual_curation_outputs_merged\\figure_data\\plot_table_final_gene_enrichment_by_reaction_type.csv",
+    "final_gene_enrichment_by_subsystem": "D:\\Project\\ai_project\\DSM123\\workflow1\\manual_curation_outputs_merged\\figure_data\\plot_table_final_gene_enrichment_by_subsystem.csv",
+    "updated_to_final_added_genes_with_gpr": "D:\\Project\\ai_project\\DSM123\\workflow1\\manual_curation_outputs_merged\\figure_data\\plot_table_updated_to_final_added_genes_with_gpr.csv",
+    "updated_to_final_gpr_changes": "D:\\Project\\ai_project\\DSM123\\workflow1\\manual_curation_outputs_merged\\figure_data\\plot_table_updated_to_final_gpr_changes.csv",
+    "updated_to_final_overall_delta": "D:\\Project\\ai_project\\DSM123\\workflow1\\manual_curation_outputs_merged\\figure_data\\plot_table_updated_to_final_overall_delta.csv"
+  },
+  "counts": {
+    "stage_rows": 4,
+    "final_reaction_type_groups": 6,
+    "final_subsystem_groups": 9,
+    "final_gene_reaction_type_groups": 2,
+    "final_gene_subsystem_groups": 8,
+    "updated_to_final_added_gene_rows": 32,
+    "updated_to_final_gpr_change_rows": 356
+  }
+}

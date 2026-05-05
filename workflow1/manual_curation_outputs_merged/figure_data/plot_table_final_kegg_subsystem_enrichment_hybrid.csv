@@ -1,0 +1,22 @@
+﻿subsystem_hybrid,reaction_count,percent,assignment_basis,class_level1
+Reaction-type: Internal metabolic,1058,44.926,reaction_type_fallback,Reaction-type fallback
+Reaction-type: Transport,397,16.858,reaction_type_fallback,Reaction-type fallback
+Reaction-type: Exchange,231,9.809,reaction_type_fallback,Reaction-type fallback
+Metabolism of cofactors and vitamins,102,4.331,kegg_ko_gene_mapping,Metabolism
+Amino acid metabolism,95,4.034,kegg_ko_gene_mapping,Metabolism
+Carbohydrate metabolism,91,3.864,kegg_ko_gene_mapping,Metabolism
+Membrane transport,59,2.505,kegg_ko_gene_mapping,Environmental Information Processing
+Lipid metabolism,51,2.166,kegg_ko_gene_mapping,Metabolism
+Energy metabolism,37,1.571,kegg_ko_gene_mapping,Metabolism
+Biosynthesis of other secondary metabolites,36,1.529,kegg_ko_gene_mapping,Metabolism
+Nucleotide metabolism,36,1.529,kegg_ko_gene_mapping,Metabolism
+Glycan biosynthesis and metabolism,30,1.274,kegg_ko_gene_mapping,Metabolism
+Cellular community - prokaryotes,26,1.104,kegg_ko_gene_mapping,Cellular Processes
+Xenobiotics biodegradation and metabolism,25,1.062,kegg_ko_gene_mapping,Metabolism
+Signal transduction,21,0.892,kegg_ko_gene_mapping,Environmental Information Processing
+Reaction-type: Demand/Sink,17,0.722,reaction_type_fallback,Reaction-type fallback
+Metabolism of terpenoids and polyketides,15,0.637,kegg_ko_gene_mapping,Metabolism
+Reaction-type: Biomass/Objective,11,0.467,reaction_type_fallback,Reaction-type fallback
+Translation,7,0.297,kegg_ko_gene_mapping,Genetic Information Processing
+"Folding, sorting and degradation",6,0.255,kegg_ko_gene_mapping,Genetic Information Processing
+Metabolism of other amino acids,4,0.17,kegg_ko_gene_mapping,Metabolism

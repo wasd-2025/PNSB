@@ -1,0 +1,12 @@
+﻿transition,change_mode,reason_category,row_count
+DSM123 -> updated_consensus,add,flux_supported_gapfill_gene_added,192
+iDT1294Photo -> DSM123,remove,bbh_hit_not_selected_gene_removed,172
+iDT1294Photo -> DSM123,remove,no_bbh_hit_remove_reference_gene,54
+iDT1294Photo -> DSM123,replace,bbh_ortholog_replacement_pass_threshold,979
+iDT1294Photo -> DSM123,replace,bbh_ortholog_replacement_selected,89
+updated_consensus -> purple_bacteriav_DSM123,add,target_gene_added_in_final_curation,12
+updated_consensus -> purple_bacteriav_DSM123,remove,curation_pruning_gene_removed,5
+updated_consensus -> purple_bacteriav_DSM123,remove,explicit_manual_gene_deletion,3
+updated_consensus -> purple_bacteriav_DSM123,remove,reference_gene_cleanup_in_final_model,167
+updated_consensus -> purple_bacteriav_DSM123,replace,inferred_replacement_identical_reaction_set,13
+updated_consensus -> purple_bacteriav_DSM123,replace,manual_replacement_from_curator_table,9
