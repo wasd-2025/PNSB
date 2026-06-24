@@ -14,7 +14,7 @@
 #   - kegg_enrichment_bubble.png
 #   - fitness123_with_category.csv
 #   - gene_cluster_dendrogram.png
-#   - heatmap(22).svg
+#   - grouped_heatmap.svg
 #
 # Notes:
 #   1) This script also creates `fitness123_annotated` and locus groups used by
@@ -858,7 +858,7 @@ if (nrow(filtered_fitness123_name) >= 2) {
     show_heatmap_legend = TRUE
   )
 
-  grDevices::svg(outfile("heatmap(22).svg"), width = 20, height = 5)
+  grDevices::svg(outfile("grouped_heatmap.svg"), width = 20, height = 5)
   ComplexHeatmap::draw(grouped_heatmap)
   grDevices::dev.off()
 } else {
@@ -869,7 +869,7 @@ if (nrow(filtered_fitness123_name) >= 2) {
     height = 6
   )
   save_placeholder_plot(
-    filename = outfile("heatmap(22).svg"),
+    filename = outfile("grouped_heatmap.svg"),
     message = "Not enough rows in category table.",
     width = 20,
     height = 5
