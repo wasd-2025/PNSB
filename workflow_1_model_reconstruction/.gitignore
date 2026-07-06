@@ -5,3 +5,6 @@ __pycache__/
 .cobra_cache/
 publication_outputs/
 ~$*
+
+!plot/publication_outputs/
+!plot/publication_outputs/**

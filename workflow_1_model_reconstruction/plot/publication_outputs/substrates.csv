@@ -1,0 +1,50 @@
+﻿reaction_id,metabolite_id,km_mM,default_concentration_mM,concentration_source
+RBPCcx,co2_c,0.446,0.01,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=4.1.1.39&r=702278
+RBPCcx,rb15bp_c,0.0128,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=4.1.1.39&r=702278
+FDH,for_c,0.38126,10.0,Km from normalized CSV; BRENDA/source record: This study
+RPE,ru5p__D_c,0.2,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=5.1.3.1&r=672127
+FBA,fdp_c,0.17,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=4.1.2.13&r=652876
+FBA3,s17bp_c,0.19,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=4.1.2.13&r=714279
+FBA3,dhap_c,0.095,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=4.1.2.13&r=714279
+PGK,3pg_c,0.75,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=2.7.2.3&r=642281
+PGK,atp_c,0.73,2.0,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=2.7.2.3&r=642281
+GAPD,nadh_c,0.048,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=1.2.1.12&r=743222
+TKT1,r5p_c,0.12,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=2.2.1.1&r=735856
+TKT1,xu5p__D_c,0.12,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=2.2.1.1&r=735856
+TKT1,g3p_c,0.67,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=2.2.1.1&r=735856
+TKT2,e4p_c,0.23,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=2.2.1.1&r=757197
+TKT2,xu5p__D_c,0.058,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=2.2.1.1&r=757197
+TALA,g3p_c,1.9,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=2.2.1.2&r=719298
+SBP,s17bp_c,0.024,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=3.1.3.37&r=729720
+FBP,fdp_c,0.08,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=3.1.3.11&r=729720
+TPI,g3p_c,3.46,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=5.3.1.1&r=682773
+PRUK,ru5p__D_c,,0.1,legacy intracellular pool assumption
+PRUK,atp_c,,2.0,legacy intracellular pool assumption
+PGM,2pg_c,0.26,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=5.4.2.12&r=734842
+PGM,3pg_c,0.04,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=5.4.2.12&r=734842
+ENO,2pg_c,0.06,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=4.2.1.11&r=734842
+ENO,pep_c,0.538,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=4.2.1.11&r=734842
+PYK,pep_c,4.58,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=2.7.1.40&r=760784
+PYK,adp_c,0.07,0.5,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=2.7.1.40&r=760784
+CS,accoa_c,0.0478,0.2,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=2.3.3.1&r=778981
+CS,oaa_c,0.0077,0.05,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=2.3.3.1&r=778981
+ACONT,cit_c,0.68,0.2,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=4.2.1.3&r=775849
+ACONT,icit_c,0.36,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=4.2.1.3&r=775849
+ICDHyr,icit_c,0.0242,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=1.1.1.42&r=761403
+ICDHyr,nadp_c,0.0121,0.5,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=1.1.1.42&r=761403
+AKGDH,akg_c,0.006,0.2,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=1.2.4.2&r=762591
+SUCOAS,succ_c,0.141,0.2,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=6.2.1.5&r=726747
+SUCOAS,atp_c,0.055,2.0,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=6.2.1.5&r=726747
+SUCOAS,coa_c,0.058,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=6.2.1.5&r=726747
+SUCDi,succ_c,0.55,0.2,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=1.3.5.1&r=674532
+SUCDi,fum_c,0.02,0.2,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=1.3.5.1&r=674532
+FUM,fum_c,0.094,0.2,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=4.2.1.2&r=749072
+FUM,mal__L_c,0.2,0.2,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=4.2.1.2&r=749072
+MDH,oaa_c,0.012,0.05,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=1.1.1.37&r=761185
+MDH,nadh_c,0.03,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=1.1.1.37&r=761185
+MDH,nad_c,0.58,1.0,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=1.1.1.37&r=761185
+MDH,mal__L_c,2.6,0.2,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=1.1.1.37&r=761185
+ME2,mal__L_c,2.7,0.2,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=1.1.1.40&r=760547
+ME2,nadp_c,0.064,0.5,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=1.1.1.40&r=760547
+ME2,nadph_c,0.047,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=1.1.1.40&r=760547
+ME2,pyr_c,6.0,0.1,Km from normalized CSV; BRENDA/source record: https://www.brenda-enzymes.org/literature.php?e=1.1.1.40&r=760547

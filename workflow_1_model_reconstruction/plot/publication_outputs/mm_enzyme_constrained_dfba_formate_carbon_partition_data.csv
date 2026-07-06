@@ -1,0 +1,29 @@
+initial_formate_mM,destination_class,reaction_id,metabolite_id,destination_name,carbon_mmol_L,percent_total_carbon_input,total_carbon_input_mmol_C_L,external_carbon_uptake_mmol_C_L
+5,Model demand/sink products,DM_dialurate_c,dialurate_c,Dialurate,2.293061464058127e-06,4.586122928116254e-05,5.0,0.0
+5,Model demand/sink products,DM_5drib_c,5drib_c,5'-deoxyribose,2.9329855935627205e-05,0.0005865971187125441,5.0,0.0
+5,CO2,EX_co2_e,co2_e,CO2 CO2,2.7165998272416907,54.331996544833814,5.0,0.0
+5,Model demand/sink products,DM_amob_c,amob_c,S-Adenosyl-4-methylthio-2-oxobutanoate,0.00015651382305418527,0.003130276461083705,5.0,0.0
+5,Biomass-associated carbon,carbon_balance_residual,biomass,Biomass-associated carbon (balance residual),2.283212036017855,45.66424072035711,5.0,0.0
+5,Residual formate,EX_for_e,for_e,Residual formate,0.0,0.0,5.0,0.0
+5,Other extracellular products,none_detected,,No other extracellular carbon product detected,0.0,0.0,5.0,0.0
+10,Model demand/sink products,DM_dialurate_c,dialurate_c,Dialurate,4.534052427451543e-06,4.534052427451543e-05,10.0,0.0
+10,Model demand/sink products,DM_5drib_c,5drib_c,5'-deoxyribose,5.799369383949648e-05,0.0005799369383949649,10.0,0.0
+10,CO2,EX_co2_e,co2_e,CO2 CO2,5.352375520903774,53.52375520903773,10.0,0.0
+10,Model demand/sink products,DM_amob_c,amob_c,S-Adenosyl-4-methylthio-2-oxobutanoate,0.00030947355335720787,0.003094735533572079,10.0,0.0
+10,Biomass-associated carbon,carbon_balance_residual,biomass,Biomass-associated carbon (balance residual),4.647252477796602,46.47252477796602,10.0,0.0
+10,Residual formate,EX_for_e,for_e,Residual formate,0.0,0.0,10.0,0.0
+10,Other extracellular products,none_detected,,No other extracellular carbon product detected,0.0,0.0,10.0,0.0
+20,Model demand/sink products,DM_dialurate_c,dialurate_c,Dialurate,9.422502873881395e-06,4.711251436940698e-05,20.0,0.0
+20,Model demand/sink products,DM_5drib_c,5drib_c,5'-deoxyribose,0.00012052038559615739,0.000602601927980787,20.0,0.0
+20,CO2,EX_co2_e,co2_e,CO2 CO2,11.057765172738797,55.28882586369399,20.0,0.0
+20,Model demand/sink products,DM_amob_c,amob_c,S-Adenosyl-4-methylthio-2-oxobutanoate,0.0006431366845790059,0.0032156834228950293,20.0,0.0
+20,Biomass-associated carbon,carbon_balance_residual,biomass,Biomass-associated carbon (balance residual),8.941461747688153,44.70730873844077,20.0,0.0
+20,Residual formate,EX_for_e,for_e,Residual formate,0.0,0.0,20.0,0.0
+20,Other extracellular products,none_detected,,No other extracellular carbon product detected,0.0,0.0,20.0,0.0
+50,Model demand/sink products,DM_dialurate_c,dialurate_c,Dialurate,2.344954679800408e-05,4.689909359600816e-05,50.0,0.0
+50,Model demand/sink products,DM_5drib_c,5drib_c,5'-deoxyribose,0.00029993606369540105,0.0005998721273908021,50.0,0.0
+50,CO2,EX_co2_e,co2_e,CO2 CO2,27.521006783015043,55.04201356603008,50.0,0.0
+50,Model demand/sink products,DM_amob_c,amob_c,S-Adenosyl-4-methylthio-2-oxobutanoate,0.0016005581515239368,0.0032011163030478736,50.0,0.0
+50,Biomass-associated carbon,carbon_balance_residual,biomass,Biomass-associated carbon (balance residual),22.47706927322294,44.95413854644588,50.0,0.0
+50,Residual formate,EX_for_e,for_e,Residual formate,0.0,0.0,50.0,0.0
+50,Other extracellular products,none_detected,,No other extracellular carbon product detected,0.0,0.0,50.0,0.0
