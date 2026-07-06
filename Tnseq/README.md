@@ -35,7 +35,6 @@ Optional packages:
 
 ```r
 install.packages("Rtsne")
-BiocManager::install(c("geneplotter", "copynumber"))
 ```
 
 ## Run

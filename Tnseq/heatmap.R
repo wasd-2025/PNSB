@@ -4,125 +4,74 @@ library(tidyr)
 library(colorspace)
 library(lattice)
 
-has_geneplotter <- requireNamespace("geneplotter", quietly = TRUE)
-has_copynumber <- requireNamespace("copynumber", quietly = TRUE)
-if (has_geneplotter) {
-  suppressPackageStartupMessages(library(geneplotter))
-}
-if (has_copynumber) {
-  suppressPackageStartupMessages(library(copynumber))
-}
+# Draw filled directional gene arrows without relying on panel.geneplot.
+panel_gene_cluster <- function(x, y, gene_strand = NULL, gene_name = NULL) {
+  if (length(x) == 0) return(invisible(NULL))
 
-# Keep compatibility with older scripts that expected panel.geneplot to exist
-# after loading geneplotter/copynumber.
-if (!exists("panel.geneplot", mode = "function")) {
-  if (has_geneplotter &&
-      exists("panel.geneplot", envir = asNamespace("geneplotter"), mode = "function", inherits = FALSE)) {
-    panel.geneplot <- get("panel.geneplot", envir = asNamespace("geneplotter"))
-  } else if (has_copynumber &&
-             exists("panel.geneplot", envir = asNamespace("copynumber"), mode = "function", inherits = FALSE)) {
-    panel.geneplot <- get("panel.geneplot", envir = asNamespace("copynumber"))
-  } else {
-    panel.geneplot <- function(x, y, arrows = TRUE, tip = 0.1, rot_labels = 0,
-                               gene_strand = NULL, gene_name = NULL,
-                               subscripts = seq_along(x), ...) {
-      if (length(x) == 0) return(invisible(NULL))
+  strand <- if (is.null(gene_strand)) rep("+", length(x)) else rep_len(gene_strand, length(x))
+  gene_labels <- if (is.null(gene_name)) rep("", length(x)) else rep_len(gene_name, length(x))
 
-      strand <- rep("+", length(x))
-      if (!is.null(gene_strand)) {
-        strand <- if (length(subscripts) > 0 && length(gene_strand) >= max(subscripts)) {
-          gene_strand[subscripts]
-        } else {
-          rep_len(gene_strand, length(x))
-        }
+  x_left <- pmin(x, y)
+  x_right <- pmax(x, y)
+  gene_width <- x_right - x_left
+  y_mid <- 0
+  half_height <- 0.24
+
+  strand_code <- toupper(trimws(as.character(strand)))
+  points_right <- strand_code %in% c("+", "1", "F", "FORWARD", "PLUS")
+  points_left <- strand_code %in% c("-", "-1", "R", "REVERSE", "MINUS")
+  undecided <- !(points_right | points_left)
+  points_right[undecided] <- x[undecided] <= y[undecided]
+
+  span <- diff(range(c(x_left, x_right), na.rm = TRUE))
+  if (!is.finite(span) || span <= 0) span <- 1
+
+  head_width <- pmin(gene_width * 0.35, span * 0.04)
+  fill_col <- ifelse(points_right, "#E69F00", "#0072B2")
+
+  for (i in seq_along(x_left)) {
+    if (!is.finite(gene_width[i]) || gene_width[i] <= 0) next
+
+    if (points_right[i]) {
+      body_end <- max(x_left[i], x_right[i] - head_width[i])
+      px <- c(x_left[i], body_end, x_right[i], body_end, x_left[i])
+      tail_x <- x_left[i]
+    } else {
+      body_start <- min(x_right[i], x_left[i] + head_width[i])
+      px <- c(x_right[i], body_start, x_left[i], body_start, x_right[i])
+      tail_x <- x_right[i]
+    }
+
+    py <- c(
+      y_mid - half_height,
+      y_mid - half_height,
+      y_mid,
+      y_mid + half_height,
+      y_mid + half_height
+    )
+
+    lattice::panel.polygon(px, py, col = fill_col[i], border = "black", lwd = 1)
+    lattice::panel.segments(
+      tail_x, y_mid - half_height,
+      tail_x, y_mid + half_height,
+      col = "black", lwd = 1
+    )
+  }
+
+  label_x <- (x_left + x_right) / 2
+  label_y <- rep(-0.55, length(x))
+  close_cutoff <- span * 0.06
+  label_order <- order(label_x)
+  if (length(label_order) > 1) {
+    for (j in 2:length(label_order)) {
+      current <- label_order[j]
+      previous <- label_order[j - 1]
+      if (abs(label_x[current] - label_x[previous]) < close_cutoff) {
+        label_y[current] <- -0.85
       }
-
-      gene_labels <- rep("", length(x))
-      if (!is.null(gene_name)) {
-        gene_labels <- if (length(subscripts) > 0 && length(gene_name) >= max(subscripts)) {
-          gene_name[subscripts]
-        } else {
-          rep_len(gene_name, length(x))
-        }
-      }
-
-      x_left <- pmin(x, y)
-      x_right <- pmax(x, y)
-      y_mid <- 0
-      half_height <- 0.24
-
-      if (isTRUE(arrows)) {
-        strand_code <- toupper(trimws(as.character(strand)))
-        points_right <- strand_code %in% c("+", "1", "F", "FORWARD", "PLUS")
-        points_left <- strand_code %in% c("-", "-1", "R", "REVERSE", "MINUS")
-        points_right[!(points_right | points_left)] <- x[!(points_right | points_left)] <= y[!(points_right | points_left)]
-
-        span <- diff(range(c(x_left, x_right), na.rm = TRUE))
-        if (!is.finite(span) || span <= 0) span <- 1
-
-        gene_width <- x_right - x_left
-        head_width <- pmin(gene_width * 0.35, span * 0.04)
-        fill_col <- ifelse(points_right, "#E69F00", "#0072B2")
-
-        for (i in seq_along(x_left)) {
-          if (!is.finite(gene_width[i]) || gene_width[i] <= 0) next
-
-          if (points_right[i]) {
-            body_end <- max(x_left[i], x_right[i] - head_width[i])
-            px <- c(x_left[i], body_end, x_right[i], body_end, x_left[i])
-          } else {
-            body_start <- min(x_right[i], x_left[i] + head_width[i])
-            px <- c(x_right[i], body_start, x_left[i], body_start, x_right[i])
-          }
-
-          py <- c(
-            y_mid - half_height,
-            y_mid - half_height,
-            y_mid,
-            y_mid + half_height,
-            y_mid + half_height
-          )
-
-          lattice::panel.polygon(px, py, col = fill_col[i], border = "black", lwd = 1)
-
-          tail_x <- if (points_right[i]) x_left[i] else x_right[i]
-          lattice::panel.segments(
-            tail_x,
-            y_mid - half_height,
-            tail_x,
-            y_mid + half_height,
-            col = "black",
-            lwd = 1
-          )
-        }
-      } else {
-        lattice::panel.rect(
-          xleft = x_left,
-          ybottom = y_mid - half_height,
-          xright = x_right,
-          ytop = y_mid + half_height,
-          col = "#E69F00",
-          border = "black"
-        )
-      }
-
-      label_x <- (x_left + x_right) / 2
-      label_y <- rep(-0.55, length(x))
-      span <- diff(range(c(x_left, x_right), na.rm = TRUE))
-      if (!is.finite(span) || span <= 0) span <- 1
-      close_cutoff <- span * 0.06
-      label_order <- order(label_x)
-      for (j in seq_along(label_order)[-1]) {
-        current <- label_order[j]
-        previous <- label_order[j - 1]
-        if (is.finite(label_x[current] - label_x[previous]) &&
-            abs(label_x[current] - label_x[previous]) < close_cutoff) {
-          label_y[current] <- -0.85
-        }
-      }
-      lattice::panel.text(label_x, label_y, labels = gene_labels, cex = 0.72)
     }
   }
+  lattice::panel.text(label_x, label_y, labels = gene_labels, cex = 0.72)
 }
 
 # Load prerequisite objects when running heatmap.R standalone.
@@ -146,7 +95,7 @@ if (!exists("outfile", mode = "function", inherits = TRUE)) {
 }
 
 fitness123_annotated1 <- fitness123_annotated %>%
-  mutate(time = recode(time, `0` = "T0-YE", `1` = "T1-Formate", `2` = "T2-Formate"))
+  dplyr::mutate(time = dplyr::recode(time, `0` = "T0-YE", `1` = "T1-Formate", `2` = "T2-Formate"))
 
 # Use locusId as the heatmap label, so no manual gene-name input is needed.
 fill_gene_name <- function(df) {
@@ -155,19 +104,19 @@ fill_gene_name <- function(df) {
 }
 
 heatmap_fitness <- function(data, key = TRUE, max_value = 6) {
-  heat_cols <- diverging_hcl(n = 7, h = c(255, 12), c = c(50, 80), l = c(20, 97), power = c(1, 1.3))
-  levelplot(
+  heat_cols <- colorspace::diverging_hcl(n = 7, h = c(255, 12), c = c(50, 80), l = c(20, 97), power = c(1, 1.3))
+  lattice::levelplot(
     norm_gene_fitness_mean ~ factor(gene_name) * fct_rev(factor(time)),
     data = data,
-    col.regions = colorRampPalette(heat_cols)(25),
+    col.regions = grDevices::colorRampPalette(heat_cols)(25),
     at = seq(-6, 6, 0.5),
     aspect = "iso",
     xlab = "",
     ylab = "",
     scales = list(cex = 0.7, x = list(rot = 90)),
     panel = function(x, y, z, ...) {
-      panel.levelplot(x, y, z, ...)
-      panel.abline(v = seq_along(unique(x)) + 0.5,
+      lattice::panel.levelplot(x, y, z, ...)
+      lattice::panel.abline(v = seq_along(unique(x)) + 0.5,
                    h = seq_along(unique(y)) + 0.5,
                    col = "white", lwd = 2)
     }
@@ -175,7 +124,7 @@ heatmap_fitness <- function(data, key = TRUE, max_value = 6) {
 }
 
 genome_plot <- function(df, xlim = NULL, title = "", rot_labels = 0) {
-  df <- replace_na(df, list(strains_per_gene = 0))
+  df <- tidyr::replace_na(df, list(strains_per_gene = 0))
   plot_theme <- list(
     axis.line = list(col = grey(0.3)),
     axis.text = list(col = grey(0.3), cex = 0.7),
@@ -188,9 +137,9 @@ genome_plot <- function(df, xlim = NULL, title = "", rot_labels = 0) {
     xscale <- list()
   }
 
-  xyplot(
+  lattice::xyplot(
     end / 1000 ~ start / 1000, df,
-    groups = strand, cex = 0.7, lwd = 1,
+    cex = 0.7, lwd = 1,
     par.settings = plot_theme, strains = df$strains_per_gene,
     scales = list(y = list(draw = FALSE), x = xscale),
     ylim = c(-3, 2), xlab = "", ylab = "",
@@ -204,29 +153,27 @@ genome_plot <- function(df, xlim = NULL, title = "", rot_labels = 0) {
       gene_strand_panel <- if (length(subscripts) > 0 && length(gene_strand) >= max(subscripts)) gene_strand[subscripts] else gene_strand
       gene_name_panel <- if (length(subscripts) > 0 && length(gene_name) >= max(subscripts)) gene_name[subscripts] else gene_name
       panel_limits <- lattice::current.panel.limits()
-      panel.segments(panel_limits$xlim[1], 0, panel_limits$xlim[2], 0, col = "black", lwd = 1)
-      panel.geneplot(
-        x,
-        y,
-        subscripts = seq_along(x),
+      lattice::panel.segments(panel_limits$xlim[1], 0, panel_limits$xlim[2], 0, col = "black", lwd = 1)
+      panel_gene_cluster(
+        x = x,
+        y = y,
         gene_strand = gene_strand_panel,
-        gene_name = gene_name_panel,
-        arrows = TRUE,
-        tip = 0.1,
-        rot_labels = rot_labels,
-        ...
+        gene_name = gene_name_panel
       )
-      panel.text((x + y) / 2, rep(0, length(x)), labels = strain_labels, cex = 0.7)
+      lattice::panel.text((x + y) / 2, rep(0, length(x)), labels = strain_labels, cex = 0.7)
+      if (!is.null(title) && nzchar(title)) {
+        lattice::panel.text(mean(panel_limits$xlim), 1.25, labels = title, cex = 0.9, font = 2)
+      }
     }
   )
 }
 
 prepare_genome_df <- function(df) {
   df %>%
-    mutate(gene_name = ifelse(is.na(gene) | gene == "", as.character(locusId), as.character(gene))) %>%
-    group_by(locusId, gene, scaffold, strand, start, end, gene_name) %>%
-    summarize(strains_per_gene = min(unique(strains_per_gene)), .groups = "drop") %>%
-    arrange(start, end)
+    dplyr::mutate(gene_name = ifelse(is.na(gene) | gene == "", as.character(locusId), as.character(gene))) %>%
+    dplyr::group_by(locusId, gene, scaffold, strand, start, end, gene_name) %>%
+    dplyr::summarize(strains_per_gene = min(unique(strains_per_gene)), .groups = "drop") %>%
+    dplyr::arrange(start, end)
 }
 
 save_group_combined <- function(filename, heatmap_plot, genome_plots, genome_positions,
@@ -243,7 +190,7 @@ save_group_combined <- function(filename, heatmap_plot, genome_plots, genome_pos
 
 # FDH ------------------------------------------------------------------------
 fdh_df <- fitness123_annotated1 %>%
-  filter(locusId %in% group1_locus) %>%
+  dplyr::filter(locusId %in% group1_locus) %>%
   fill_gene_name()
 
 plot_fdh_fit <- heatmap_fitness(fdh_df)
@@ -261,14 +208,14 @@ save_group_combined(
 # CBB ------------------------------------------------------------------------
 preset_genes <- c("rbcS", "rlp2")
 cbb_df <- fitness123_annotated1 %>%
-  filter(locusId %in% group2_locus) %>%
+  dplyr::filter(locusId %in% group2_locus) %>%
   fill_gene_name() %>%
-  mutate(order = case_when(
+  dplyr::mutate(order = dplyr::case_when(
     gene %in% preset_genes ~ 1,
     TRUE ~ 2
   )) %>%
-  arrange(order) %>%
-  select(-order)
+  dplyr::arrange(order) %>%
+  dplyr::select(-order)
 
 plot_fdh_fit <- heatmap_fitness(cbb_df)
 cbb_genome_df <- prepare_genome_df(cbb_df)
@@ -289,7 +236,7 @@ save_group_combined(
 
 # ETC ------------------------------------------------------------------------
 etc_df <- fitness123_annotated1 %>%
-  filter(locusId %in% group3_locus) %>%
+  dplyr::filter(locusId %in% group3_locus) %>%
   fill_gene_name()
 
 plot_fdh_fit <- heatmap_fitness(etc_df)
@@ -309,7 +256,7 @@ save_group_combined(
 
 # RC -------------------------------------------------------------------------
 rc_df <- fitness123_annotated1 %>%
-  filter(locusId %in% group4_locus) %>%
+  dplyr::filter(locusId %in% group4_locus) %>%
   fill_gene_name()
 
 plot_fdh_fit <- heatmap_fitness(rc_df)
@@ -333,22 +280,22 @@ if (file.exists(file_130)) {
   df130 <- read.csv(file_130, stringsAsFactors = FALSE)
 
   fitness123_annotated2 <- fitness123_annotated %>%
-    mutate(time = recode(time, `0` = "0-6", `1` = "0-48", `2` = "6-48"))
+    dplyr::mutate(time = dplyr::recode(time, `0` = "0-6", `1` = "0-48", `2` = "6-48"))
 
   heatmap_fitness_130 <- function(data, key = TRUE, max_value = 8) {
-    heat_cols <- diverging_hcl(n = 8, h = c(255, 12), c = c(50, 80), l = c(20, 97), power = c(1, 1.3))
-    levelplot(
+    heat_cols <- colorspace::diverging_hcl(n = 8, h = c(255, 12), c = c(50, 80), l = c(20, 97), power = c(1, 1.3))
+    lattice::levelplot(
       Log2FC_mean ~ factor(locusId) * fct_rev(factor(time)),
       data = data,
-      col.regions = colorRampPalette(heat_cols)(25),
+      col.regions = grDevices::colorRampPalette(heat_cols)(25),
       at = seq(-5, 8, 0.6),
       aspect = "iso",
       xlab = "",
       ylab = "",
       scales = list(cex = 0.7, x = list(rot = 90)),
       panel = function(x, y, z, ...) {
-        panel.levelplot(x, y, z, ...)
-        panel.abline(v = seq_along(unique(x)) + 0.5,
+        lattice::panel.levelplot(x, y, z, ...)
+        lattice::panel.abline(v = seq_along(unique(x)) + 0.5,
                      h = seq_along(unique(y)) + 0.5,
                      col = "white", lwd = 2)
       }
